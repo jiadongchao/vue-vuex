@@ -1,6 +1,6 @@
 # project
 
-> A Vue.js project
+> A Vue + vuex 实现父子组件双向通信的demo！！！！
 
 ## Build Setup
 
