@@ -10,12 +10,11 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-```
 ## 使用Vuex
 
 本文档是基于vue-cli 实现vuex
 
- ###安装： npm install vuex  --save 
+###安装： npm install vuex  --save 
 
 引用：为了便于维护，我们单独在 src 创建一个文件夹 store，在store建立一个index.js文件
 import Vue from 'vue'
@@ -32,7 +31,6 @@ export default new vuex.Store({
     }
   }
 
-
 下面还要在main.js里引用一下
 import store from './store'
 new Vue({
@@ -45,9 +43,7 @@ new Vue({
 
 
 
-
 ###使用方法：
-
 #### state负责存储整个应用的状态数据,
 
 在store文件下的 index.js，定义一个count：0
@@ -63,7 +59,7 @@ new Vue({
 2.在标签里 v-model="$store.state.count" //参考page1.vue
 
 
-#### mutationName 利用它可以更改状态，本质就是用来处理数据的函数，其接收唯一参数值state,就是它上面的state对象。
+### mutationName 利用它可以更改状态，本质就是用来处理数据的函数，其接收唯一参数值state,就是它上面的state对象。
 
 1.定义了一个函数add，每次执行count+1；
 	mutations : {
@@ -71,7 +67,6 @@ new Vue({
     	        state.count ++
     	    }
     	}
-
 
 2.在组件标签里 通过@click="$store.commit('add')" 触发 mutationName里的add函数
 各组件里的 $store.state.count 都会发生变化
